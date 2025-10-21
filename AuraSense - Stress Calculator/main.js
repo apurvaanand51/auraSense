@@ -22,23 +22,23 @@ function calculateStress() {
         alert("Enter all values correctly");
     } else {
 
-        let generalhr = (hr_inputVal - 79.2714) / 12.7141;
+        let generalhr = (hr_inputVal - 81.6625) / 13.6585;
         let generalhrInt = parseFloat(generalhr.toFixed(4));
 
-        let generalhrv = (-(hrv_inputVal - 0.1010)) / 0.0291;
+        let generalhrv = (-(hrv_inputVal - 0.0952)) / 0.0315;
         let generalhrvInt = parseFloat(generalhrv.toFixed(4));
 
-        let generalbt = Math.abs((bt_inputVal - 36.7844) / 0.4138);
+        let generalbt = Math.abs((bt_inputVal - 36.8126) / 0.3961);
         let generalbtInt = parseFloat(generalbt.toFixed(4));
 
         let stressIndex = (0.5 * generalhrvInt) + (0.3 * generalhrInt) + (0.2 * generalbtInt);
         let stressIndexInt = parseFloat(stressIndex.toFixed(4));
 
-        if (stressIndexInt < 1.0) {
+        if (stressIndexInt < 0.8) {
             result.innerHTML = `<h3>Stress Index: ${stressIndexInt}</h3><br><h3>Stress Level: Low</h3>`;
-        } else if(stressIndexInt >= 1.0 && stressIndexInt <= 2.5){
+        } else if(stressIndexInt >= 0.8 && stressIndexInt <= 1.8){
             result.innerHTML = `<h3>Stress Index: ${stressIndexInt}</h3><br><h3>Stress Level: Medium</h3>`;
-        } else if(stressIndexInt > 2.5){
+        } else if(stressIndexInt > 1.8){
             result.innerHTML = `<h3>Stress Index: ${stressIndexInt}</h3><br><h3>Stress Level: High</h3>`;
         }
 
