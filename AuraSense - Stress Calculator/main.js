@@ -1,8 +1,13 @@
 let btn = document.querySelector("#btn");
+let btnReset = document.querySelector("#btnReset");
 let hr_input = document.querySelector("#hrInp");
 let bt_input = document.querySelector("#btInp")
 let hrv_input = document.querySelector("#hrvInp");
 let result = document.querySelector(".result");
+
+btnReset.addEventListener("click", () => {
+    location.reload();
+})
 
 btn.addEventListener("click", () => {
     calculateStress();
