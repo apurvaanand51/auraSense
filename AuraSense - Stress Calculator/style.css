@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    background-color: azure;
+}
+
+.title{
+    margin-bottom: 2.5em;
+}
+
+.calc-cont{
+    height: 50%;
+    width: 50%;
+    background-color: rgb(177, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+.calc-cont > .hr{
+    margin: 1.2em;
+}
+
+.calc-cont > .hr > label{
+    font-size: 1.2em;
+}
+
+.calc-cont > .hr > input{
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+.calc-cont > .bt{
+    margin: 1.2em;
+}
+
+.calc-cont > .bt > label{
+    font-size: 1.2em;
+}
+
+.calc-cont > .bt > input{
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+.calc-cont > .hrv{
+    margin: 1.2em;
+}
+
+.calc-cont > .hrv > label{
+    font-size: 1.2em;
+}
+
+.calc-cont > .hrv > input{
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+.calc-cont > button{
+    margin: 1.2em;
+    font-size: 1.2em;
+    padding: 0.8em;
+}
+
+.result{
+    margin-top: 2.5em;
+}
+
+@media (max-width: 800px) {
+    .title{
+        font-size: 0.7em;
+    }
+    .calc-cont{
+        width: 75%;
+    }
+    .calc-cont > div{
+        transform: scale(0.7);
+    }
+    .calc-cont > button{
+        transform: scale(0.7);
+    }
+}
